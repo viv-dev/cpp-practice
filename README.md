@@ -12,21 +12,4 @@ This project was setup trying to follow modern CMake best practices. More specif
 
 ## Conan
 
-Conan is being used to manage any 3rd party libraries.
-
-## Building
-
-To build this project you need both conan and cmake (v3.13 or greater).
-
-Run:
-
-`conan install .`
-
-## TODO
-
-- Quick refresher on pointers
-- RValues and Lvalues
-- The Rule of 3 and the Rule of 5
-- Lambda's and capture clauses
-- Look into std::ref & the new pointer types
-- Overloaded operators
+Conan is being used to manage any 3rd party libraries. To ensure these are available please run `conan install .` before attempting to build.
