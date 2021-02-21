@@ -1,12 +1,12 @@
+add_library(viv-functions)
+
 target_include_directories(
-  viv-practice
+  viv-functions
   PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
 )
-target_sources(viv-practice 
+target_sources(viv-functions
   PUBLIC 
-    "functions.h"
-    "functions.cpp"
     "lambda.h"
     "lambda.cpp"
 )

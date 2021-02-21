@@ -16,7 +16,7 @@ class StringWithConst {
     // Will be called when object is declared without const keyword
     char& operator[](const std::size_t position) {
         // Calls the const version of the operator to avoid duplication
-        const_cast<char&>(  // Removes const on the return value
+        return const_cast<char&>(  // Removes const on the return value
             static_cast<const StringWithConst&>(
                 *this)[position]  // Casts 'this' as const so we can call the
                                   // const version of the overloaded operator
