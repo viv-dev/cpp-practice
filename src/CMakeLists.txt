@@ -1,0 +1,9 @@
+target_sources(viv-practice 
+  PUBLIC 
+    "main.cpp"
+)
+add_subdirectory(functions)
+add_subdirectory(objects)
+add_subdirectory(maths)
+add_subdirectory(memory)
+add_subdirectory(stl)

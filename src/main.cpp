@@ -1,5 +1,6 @@
 #include <iostream>
 
-int main() {
-  std::cout << "Hello World" << std::endl;
-}
+#include "const-class.h"
+#include "lambda.h"
+
+int main() { Lambda::lamdbaHello(); }

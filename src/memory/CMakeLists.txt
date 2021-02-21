@@ -1,0 +1,9 @@
+target_include_directories(
+  viv-practice
+  PUBLIC
+  ${CMAKE_CURRENT_LIST_DIR}
+)
+target_sources(
+  viv-practice 
+  PUBLIC 
+)
