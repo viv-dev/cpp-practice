@@ -7,10 +7,11 @@ conan_basic_setup()
 include_directories(${CONAN_INCLUDE_DIRS})
 
 # Create our executable
-add_executable(viv-practice "")
+# add_executable(viv-practice "")
+# target_link_libraries(viv-practice PUBLIC ${CONAN_LIBS} viv-functions)
+# target_compile_definitions(viv-practice PUBLIC DOCTEST_CONFIG_DISABLE)
+
 add_subdirectory(src)
-target_link_libraries(viv-practice PUBLIC ${CONAN_LIBS} viv-functions)
-target_compile_definitions(viv-practice PUBLIC DOCTEST_CONFIG_DISABLE)
 
  # Set up a test that calls our testing executable
 include(CTest)

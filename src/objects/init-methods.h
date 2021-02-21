@@ -1,5 +1,4 @@
 
-
 /*
   General rule: Always initialise values, preferabily in the initalisation list
   of a constructor, especially built-in types

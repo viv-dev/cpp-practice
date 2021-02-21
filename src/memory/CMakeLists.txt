@@ -1,9 +1,11 @@
+add_library(viv-memory)
+
 target_include_directories(
-  viv-practice
+  viv-memory
   PUBLIC
   ${CMAKE_CURRENT_LIST_DIR}
 )
-target_sources(
-  viv-practice 
-  PUBLIC 
+target_sources(viv-memory
+  PUBLIC
+  ""
 )

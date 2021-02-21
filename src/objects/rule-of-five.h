@@ -3,6 +3,11 @@
 #include <memory>
 #include <string>
 
+/**
+ * Rule of 5 suggests that if we need to define our own implementation of
+ * implicit class functions (e.g. constructor, deconstructor, copy/move
+ * constructor + operators ), we should probably define all of them.
+ */
 class RuleOfFiveClass {
    public:
     // Standard Constructor
@@ -36,16 +41,20 @@ class RuleOfFiveClass {
     // It is my precious...
     std::unique_ptr<std::string> value;
 
+    // Common copy implementation so logic isn't duplicated between copy
+    // constructor and copy assignment operator
     void copyImpl(const RuleOfFiveClass& rhs) {
         // They have a unique_ptr... how do I steal it and make it mine?
-        // ... For now we will have to live with simply plagiarising
-        // But when we return in the rule of 5, we shall see how we can be
-        // theives
-        // We can... access private member variables in copy constructor?
+        // ... In copy constructor/operators now we will have to live with
+        // simply plagiarising
         value.reset(new std::string(
             *rhs.value));  // This becomes much more complex if the unique_ptr
                            // is a pointer to a complex object
     }
 
-    void moveImpl(RuleOfFiveClass&& rhs) { value = std::move(rhs.value); }
+    void moveImpl(RuleOfFiveClass&& rhs) {
+        // Here we can directly steal / gut this value from the reference class
+        // Your sacrifice will not be in vain, my friend...
+        value = std::move(rhs.value);
+    }
 };

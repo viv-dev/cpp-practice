@@ -2,7 +2,7 @@
 
 This is just a small project for me to refresh and experiment with different parts of the C++ language.
 
-It has been broken up into different sub-directories with the name of the area I am writing sample code in.
+It has been broken up into different sub-directories each producing a library with sample code for the topic area.
 
 As of this writing, most of these classes are capturing techniques mentioned in 'Effective C++' (and modernising them, if relevant, through suggestions in 'Modern Effective C++').
 
@@ -13,3 +13,7 @@ This project was setup trying to follow modern CMake best practices. More specif
 ## Conan
 
 Conan is being used to manage any 3rd party libraries. To ensure these are available please run `conan install .` before attempting to build.
+
+## Testing
+
+Testing is being performemd using doctest in the test directory. Testing is the primary way of 'running' the libraries, as they form a good way of both running and validating each of the example exercises.
