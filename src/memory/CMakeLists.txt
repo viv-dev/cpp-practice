@@ -7,5 +7,6 @@ target_include_directories(
 )
 target_sources(viv-memory
   PUBLIC
-  ""
+  "example-pointers.h"
+  "example-pointers.cpp"
 )

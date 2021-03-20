@@ -44,12 +44,11 @@ class RuleOfFiveClass {
     // Common copy implementation so logic isn't duplicated between copy
     // constructor and copy assignment operator
     void copyImpl(const RuleOfFiveClass& rhs) {
-        // They have a unique_ptr... how do I steal it and make it mine?
-        // ... In copy constructor/operators now we will have to live with
+        // In copy constructor/operators we will have to live with
         // simply plagiarising
         value.reset(new std::string(
-            *rhs.value));  // This becomes much more complex if the unique_ptr
-                           // is a pointer to a complex object
+            *rhs.value));  // This becomes much more complex if the
+                           // unique_ptr is a pointer to a complex object
     }
 
     void moveImpl(RuleOfFiveClass&& rhs) {

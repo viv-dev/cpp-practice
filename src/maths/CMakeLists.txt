@@ -7,5 +7,6 @@ target_include_directories(
 )
 target_sources(viv-math
   PUBLIC
-  ""
+  "linear-algebra.h"
+  "linear-algebra.cpp"
 )

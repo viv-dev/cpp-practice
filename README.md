@@ -16,4 +16,4 @@ Conan is being used to manage any 3rd party libraries. To ensure these are avail
 
 ## Testing
 
-Testing is being performemd using doctest in the test directory. Testing is the primary way of 'running' the libraries, as they form a good way of both running and validating each of the example exercises.
+Testing is being performed using doctest in the test directory. Testing is the primary way of 'running' the libraries, as they form a good way of both running and validating each of the example exercises.

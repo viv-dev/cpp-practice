@@ -7,4 +7,6 @@ target_include_directories(
 )
 target_sources(viv-stl
   PUBLIC
+  map-examples.h
+  map-examples.cpp
 )

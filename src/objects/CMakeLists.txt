@@ -8,4 +8,6 @@ target_include_directories(
 target_sources(viv-objects 
   PUBLIC 
     "const-class.h"
+    "init-methods.h"
+    "init-methods.cpp"
 )
